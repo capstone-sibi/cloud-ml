@@ -7,11 +7,8 @@ def get_prediction(video_path, model_path, weights_path):
     classes = ['aku', 'kamu', 'maaf', 'semangat', 'senang', 'terimakasih']
 
     cap = cv2.VideoCapture(video_path)
-    print("BERHASIL VID")
     model = load_model(model_path)
-    print("BERHASIL LOAD MODEL")
     model.load_weights(weights_path)
-    print("BERHASIL LOAD WEIGHT")
     # Check if the video file is opened successfully
     if not cap.isOpened():
         print("Error opening video file")

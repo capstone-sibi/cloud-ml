@@ -16,6 +16,6 @@ def home():
 @app.post("/")
 async def process_url(url_input: URLInput):
     received_url = url_input.url
-    #hasil_predict = get_prediction(received_url, "sibi.h5", "weights.43-1.09.hdf5")
-    hasil_predict = received_url
+    hasil_predict = get_prediction(received_url, "sibi.h5", "weights.43-1.09.hdf5")
+    #hasil_predict = received_url
     return {"result": f"{hasil_predict}"}

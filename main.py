@@ -18,4 +18,5 @@ class URLInput(BaseModel):
 async def process_url(url_input: URLInput):
     received_url = url_input.url
     hasil_predict = get_prediction(received_url, "sibi.h5", "weights.43-1.09.hdf5")
-    return {"message": f"URL received: {hasil_predict}"}
+    hasil_predict = "temp"
+    return {"result": f"{hasil_predict}"}
